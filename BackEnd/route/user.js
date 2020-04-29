@@ -104,7 +104,7 @@ router.post('/savecart1', async (req, res) => {
   const email = req.body.email;
   const id = req.body.id;
   try {
-    const data = await cart1.find({ email: email });
+    const data = await cart1.findOne({ email: email });
     if (data == '' || data == null) {
       const savecart = new cart1({ email: email, id: id });
       const data1 = await savecart.save();
@@ -127,7 +127,7 @@ router.post('/savecart1', async (req, res) => {
       }
     }
   } catch (err) {
-    res.send('err' + err);
+    error(err, res);
   }
 });
 
@@ -148,28 +148,17 @@ router.post('/removecart', async (req, res) => {
   }
 });
 
-// async function de(id, res) {
-//   let a = [];
-//   let details = await id.forEach(async (e) => {
-//     console.log(e);
-//     let data = await books.find({ _id: e });
-//     a.push(data);
-//     console.log(data);
-//   });
-//   res.send(a);
-// }
-
 router.get('/getcart1', async (req, res) => {
   const email = req.body.email;
-  const data = await cart1.find({ email: email });
-  const id = data[0].id;
-
-  let details = await id.forEach(async (e) => {
-    console.log(e);
-    let data = await books.find({ _id: e });
-    console.log(data);
-    console.log('end');
-  });
+  const data = await cart1.findOne({ email: email });
+  const id = data.id;
+  let details = await Promise.all(
+    id.map(async (e) => {
+      let data1 = await books.findById({ _id: e });
+      console.log(Promise.all);
+      return data1;
+    })
+  );
   res.json({ data: details });
 });
 
