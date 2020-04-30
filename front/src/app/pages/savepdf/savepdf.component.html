@@ -1,0 +1,17 @@
+<div class="save">
+  <form [formGroup]="login" (ngSubmit)="save()">
+    <div>
+      <label>File</label>
+      <input type="file" id="" formControlName="file" (change)="file($event)" />
+      <div
+        *ngIf="login.controls.file.invalid && login.controls.file.dirty"
+        class="danger"
+      >
+        <div *ngIf="login.controls.file.errors.required">
+          ! Email required
+        </div>
+      </div>
+    </div>
+    <input type="submit" value="Login" [disabled]="login.invalid" />
+  </form>
+</div>

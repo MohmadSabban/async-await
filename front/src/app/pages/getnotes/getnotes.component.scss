@@ -1,0 +1,31 @@
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+  .notes {
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+  }
+}
+li {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+button {
+  width: 40px;
+  height: 40px;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: black;
+  i {
+    pointer-events: none;
+    font-size: 18px;
+    color: whitesmoke;
+  }
+}

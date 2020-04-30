@@ -155,7 +155,6 @@ router.get('/getcart1', async (req, res) => {
   let details = await Promise.all(
     id.map(async (e) => {
       let data1 = await books.findById({ _id: e });
-      console.log(Promise.all);
       return data1;
     })
   );

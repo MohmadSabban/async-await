@@ -1,0 +1,11 @@
+<ul>
+  <li *ngFor="let n of notes">
+    <a href="http://localhost:8080/notes/{{ n.notes }}" target="_blank">
+      <img src="../../../assets/Image/hy.jpg" alt="" class="notes" />
+      <!-- <img src="http://localhost:8080/notes/{{ n.notes }}" alt="" /> -->
+    </a>
+    <button (click)="downlodenotes(n.notes, 'filename')">
+      <i class="fa fa-download" aria-hidden="true"></i>
+    </button>
+  </li>
+</ul>

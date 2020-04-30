@@ -6,6 +6,7 @@ const bodyparser = require('body-parser');
 const mongoose = require('mongoose');
 const book = require('./route/books');
 const user = require('./route/user');
+const notes = require('./route/notes');
 // const user = user1.router;
 api.use(cors());
 api.use(bodyparser.urlencoded({ extended: true }));
@@ -31,7 +32,8 @@ mongoose
 
 api.use('/user', user);
 api.use('/book', book);
-
+api.use('/notes', notes);
+api.use('/notes', express.static('notes_pdf'));
 api.listen(8080, () => {
   console.log('App start');
 });
