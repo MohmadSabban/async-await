@@ -8,8 +8,6 @@ export class GetnotesService {
   constructor(private http: HttpClient) {}
 
   getnotes() {
-    const headers = new HttpHeaders();
-    headers.set("Content-Type: text/html", "application/json");
-    return this.http.get(`${notes}/fetch`, { headers: headers });
+    return this.http.get(`${notes}/fetch`);
   }
 }
