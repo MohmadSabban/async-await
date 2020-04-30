@@ -8,6 +8,7 @@ import Swal from "sweetalert2";
 export class ConfirmComponent implements OnInit {
   constructor() {}
 
+  // Confirm BOx
   confimr() {
     Swal.fire({
       title: "Are you sure?",
@@ -23,6 +24,19 @@ export class ConfirmComponent implements OnInit {
         );
       } else {
         console.log("no del");
+      }
+    });
+  }
+
+  // Taking value from user
+  in() {
+    Swal.fire({
+      input: "text",
+      inputPlaceholder: "Enter Name",
+      showCancelButton: true,
+    }).then((result) => {
+      if (result.value) {
+        console.log(result.value);
       }
     });
   }
