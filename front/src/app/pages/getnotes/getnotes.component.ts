@@ -20,7 +20,7 @@ export class GetnotesComponent implements OnInit {
       console.log(this.notes);
     });
   }
-
+  // TO Downlode FIle
   downlodenotes(id, filename) {
     this.downlode.down(id).subscribe((res) => {
       this.data = res;

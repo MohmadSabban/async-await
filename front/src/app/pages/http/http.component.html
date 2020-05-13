@@ -1,0 +1,55 @@
+<section>
+  <form [formGroup]="login" (ngSubmit)="save()">
+    <div class="item">
+      <label>Name</label>
+      <input
+        type="text"
+        formControlName="name"
+        id=""
+        autofocus
+        [ngClass]="{
+          vr: login.controls.name.dirty && login.controls.name.errors
+        }"
+      />
+      <div *ngIf="login.controls.name.invalid && login.controls.name.dirty">
+        <div *ngIf="login.controls.name.errors.required" class="de">
+          ! Email required
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <label>PassWord</label>
+      <input
+        type="password"
+        formControlName="password"
+        class="pass"
+        id="pass"
+        [ngClass]="{
+          vr: login.controls.password.dirty && login.controls.password.errors
+        }"
+      />
+      <i class="fa fa-eye" aria-hidden="true" (click)="showpass($event)"></i>
+    </div>
+
+    <div
+      *ngIf="login.controls.password.invalid && login.controls.password.dirty"
+    >
+      <div *ngIf="login.controls.password.errors.required" class="de">
+        ! Email required
+      </div>
+    </div>
+    <div *ngIf="login.invalid === true">
+      <input
+        type="submit"
+        value="Login"
+        class="red"
+        [disabled]="login.invalid"
+      />
+    </div>
+
+    <div *ngIf="login.invalid === false">
+      <input type="submit" value="Login" class="green" />
+    </div>
+  </form>
+</section>

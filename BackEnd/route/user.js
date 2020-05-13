@@ -161,4 +161,24 @@ router.get('/getcart1', async (req, res) => {
   res.json({ data: details });
 });
 
+router.post('/formdata', async (req, res) => {
+  const name = req.body.name;
+  const pass = req.body.password;
+  const age = req.body.age;
+  const as = req.query.na;
+  const data = req.query.data;
+  const hea = req.header('ta');
+  const url = req.originalUrl;
+  res.json({
+    nameb: name,
+    passb: pass,
+    ageb: age,
+    msg: 'backedn',
+    sap: as,
+    datap: data,
+    head: hea,
+    url: url,
+  });
+});
+
 module.exports = router;

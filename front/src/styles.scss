@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+*,
+body {
+  width: 0;
+  margin: 0;
+}
+
+.red {
+  background-color: rgb(216, 47, 47);
+}
+
+.green {
+  background-color: rgb(73, 192, 73);
+}
