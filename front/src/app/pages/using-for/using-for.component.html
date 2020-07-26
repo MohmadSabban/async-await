@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First</title>
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main class="wrapper">
+      <!-- Slider Start -->
+      <!-- <div class="slider">
+        <div class="slide">
+          <img src="./Assets1/Image/1.svg" alt="" />
+          <img src="./Assets1/Image/2.svg" alt="" />
+          <img src="./Assets1/Image/3.svg" alt="" />
+        </div>
+        <ul class="action">
+          <li onclick="backward(1)">
+            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+          </li>
+          <li onclick="forward(1)">
+            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+          </li>
+        </ul>
+
+        <div class="sliderText">
+          <h1>
+            Buy <span>Your</span> FAVOURITE<span> BOOK</span> From
+            <span> Here</span>
+          </h1>
+        </div>
+      </div> -->
+      <!-- Slider End -->
+
+      <!-- New Product Text -->
+      <div class="upperText">
+        <h1>New <span class="orange"> Product</span></h1>
+        <p>
+          Maybe this is why we read, and why in moments of darkness we return to
+          books: to find words for what we already know
+        </p>
+      </div>
+
+      <!-- NEw Product -->
+      <div class="newProduct">
+        <!-- First Product -->
+
+        <div class="product" *ngFor="let c of name">
+          <!-- <img src="" alt="" /> -->
+          <h3>
+            {{ c.name }}
+          </h3>
+          <ul class="price">
+            <li><span>$786</span></li>
+            <li><del>$800</del></li>
+          </ul>
+          <ul class="icon">
+            <li class="wishlist">
+              <i class="fa fa-heartbeat" aria-hidden="true"></i>
+            </li>
+            <li class="cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </li>
+            <li class="quickview">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </li>
+          </ul>
+        </div>
+
+        <!-- First Product End -->
+
+        <!-- Second Product start -->
+        <div class="product">
+          <!-- <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" /> -->
+          <h3>
+            Second Book
+          </h3>
+          <ul class="price">
+            <li><span>$786</span></li>
+            <li><del>$800</del></li>
+          </ul>
+          <ul class="icon">
+            <li><i class="fa fa-heartbeat" aria-hidden="true"></i></li>
+            <li><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+            <li><i class="fa fa-search" aria-hidden="true"></i></li>
+          </ul>
+        </div>
+        <!-- second Product End -->
+
+        <!-- Third Product Start -->
+        <div class="product">
+          <!-- <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" /> -->
+          <h3>
+            My Third Book
+          </h3>
+          <ul class="price">
+            <li><span>$786</span></li>
+            <li><del>$800</del></li>
+          </ul>
+          <ul class="icon">
+            <li><i class="fa fa-heartbeat" aria-hidden="true"></i></li>
+            <li><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+            <li><i class="fa fa-search" aria-hidden="true"></i></li>
+          </ul>
+        </div>
+        <!-- Third Product End -->
+
+        <!-- Fourt Product start-->
+        <div class="product">
+          <!-- <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" /> -->
+          <h3>
+            My Fourth Book
+          </h3>
+          <ul class="price">
+            <li><span>$786</span></li>
+            <li><del>$800</del></li>
+          </ul>
+          <ul class="icon">
+            <li><i class="fa fa-heartbeat" aria-hidden="true"></i></li>
+            <li><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+            <li><i class="fa fa-search" aria-hidden="true"></i></li>
+          </ul>
+        </div>
+        <!-- Fourt Product End -->
+      </div>
+      <!-- New Product End -->
+
+      <!-- Subscriber Start -->
+      <div class="subscriber">
+        <div class="innersection">
+          <h1>STAY <span> WITH</span> US</h1>
+          <p>
+            Register to our newsletters now and stay up-to-date with new
+            collections, the latest lookbooks and exclusive offers.
+          </p>
+        </div>
+      </div>
+      <!-- Subscriber End -->
+
+      <!-- Another Product -->
+
+      <div class="upperText another">
+        <h1>All <span class="orange"> Product</span></h1>
+        <p>
+          Maybe this is why we read, and why in moments of darkness we return to
+          books: to find words for what we already know
+        </p>
+      </div>
+
+      <div class="newProduct">
+        <!-- First Product -->
+        <div class="product">
+          <!-- <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" /> -->
+          <h3>
+            My First Book
+          </h3>
+          <ul class="price">
+            <li><span>$786</span></li>
+            <li><del>$800</del></li>
+          </ul>
+          <ul class="icon">
+            <li class="wishlist">
+              <i class="fa fa-heartbeat" aria-hidden="true"></i>
+            </li>
+            <li class="cart">
+              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </li>
+            <li class="quickview">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </li>
+          </ul>
+        </div>
+        <!-- First Product End -->
+
+        <!-- Second Product start -->
+        <div class="product">
+          <!-- <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" /> -->
+          <h3>
+            Second Book
+          </h3>
+          <ul class="price">
+            <li><span>$786</span></li>
+            <li><del>$800</del></li>
+          </ul>
+          <ul class="icon">
+            <li><i class="fa fa-heartbeat" aria-hidden="true"></i></li>
+            <li><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+            <li><i class="fa fa-search" aria-hidden="true"></i></li>
+          </ul>
+        </div>
+        <!-- second Product End -->
+
+        <!-- Third Product Start -->
+        <div class="product">
+          <!-- <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" /> -->
+          <h3>
+            My Third Book
+          </h3>
+          <ul class="price">
+            <li><span>$786</span></li>
+            <li><del>$800</del></li>
+          </ul>
+          <ul class="icon">
+            <li><i class="fa fa-heartbeat" aria-hidden="true"></i></li>
+            <li><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+            <li><i class="fa fa-search" aria-hidden="true"></i></li>
+          </ul>
+        </div>
+        <!-- Third Product End -->
+
+        <!-- Fourt Product start-->
+        <div class="product">
+          <!-- <img src="./Assets1/Image/Image-1573811184077.jpeg" alt="" /> -->
+          <h3>
+            My Fourth Book
+          </h3>
+          <ul class="price">
+            <li><span>$786</span></li>
+            <li><del>$800</del></li>
+          </ul>
+          <ul class="icon">
+            <li><i class="fa fa-heartbeat" aria-hidden="true"></i></li>
+            <li><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+            <li><i class="fa fa-search" aria-hidden="true"></i></li>
+          </ul>
+        </div>
+        <!-- Fourt Product End -->
+      </div>
+
+      <!--Another Product End -->
+    </main>
+  </body>
+</html>
