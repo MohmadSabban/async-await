@@ -13,7 +13,21 @@ export class QuadricComponent implements OnInit {
     console.log(rootsArr);
   }
 
+  reversearray() {
+    const data = [
+      { name: "sabban", no: 4 },
+      { name: "rahul", no: 3 },
+      { name: "dj", no: 2 },
+      { name: "jd", no: 1 },
+    ];
+    const newdata = [...data].reverse();
+
+    data.map((e) => console.log(`orignal data :- ${e.no}`));
+    newdata.map((b) => console.log(`Reverse data :- ${b.name}  ${b.no} `));
+  }
+
   ngOnInit(): void {
-    this.getexpr();
+    // this.getexpr();
+    this.reversearray();
   }
 }
