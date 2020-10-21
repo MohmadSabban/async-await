@@ -1,13 +1,19 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { SavepdfService } from "../../service/savepdf.service";
+import { Meta, Title } from "@angular/platform-browser";
 @Component({
   selector: "app-savepdf",
   templateUrl: "./savepdf.component.html",
   styleUrls: ["./savepdf.component.scss"],
 })
 export class SavepdfComponent implements OnInit {
-  constructor(private fb: FormBuilder, private savep: SavepdfService) {}
+  constructor(
+    private fb: FormBuilder,
+    private savep: SavepdfService,
+    private metaTagService: Meta,
+    private titleService: Title
+  ) {}
   login: FormGroup;
   Filepath;
 
@@ -29,6 +35,20 @@ export class SavepdfComponent implements OnInit {
 
   ngOnInit(): void {
     this.login_validate();
+
+    // This is for title
+    this.titleService.setTitle("Save PDF");
+    // This is for Meta tag
+    this.metaTagService.addTags([
+      {
+        name: "keywords",
+        content: `Angular SEO Integration,
+         Music CRUD,
+          Angular Universal`,
+      },
+      { name: "robots", content: "index, follow" },
+      { name: "description", content: "" },
+    ]);
   }
 
   login_validate() {

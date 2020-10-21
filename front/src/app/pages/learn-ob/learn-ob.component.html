@@ -1,0 +1,28 @@
+<input
+  type="text"
+  name=""
+  placeholder="search text"
+  [(ngModel)]="searchText"
+  id=""
+/>
+
+<div *ngIf="data !== undefined; else loading">
+  <ul *ngFor="let item of data | searchPipe: searchText">
+    <li>{{ item.name }}</li>
+  </ul>
+</div>
+
+<ng-template #loading>
+  <div class="spinner center">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
+    <div class="bounce3"></div>
+  </div>
+</ng-template>
+
+<div
+  [ngClass]="{ center: (data | searchPipe: searchText)?.length == 0 }"
+  *ngIf="(data | searchPipe: searchText)?.length == 0"
+>
+  <h1>No result found</h1>
+</div>

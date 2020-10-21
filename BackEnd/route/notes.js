@@ -59,4 +59,20 @@ router.post('/downlode', async (req, res) => {
   res.json({ data: data });
 });
 
+router.get('/getuser', async (req, res) => {
+  const data = [
+    { name: 'sabban', rollno: 14 },
+    { name: 'rahul', rollno: 14 },
+    { name: 'shubham', rollno: 14 },
+    { name: 'dj', rollno: 14 },
+    { name: 'jd', rollno: 14 },
+    { name: 'sunil', rollno: 14 },
+    { name: 'rajat', rollno: 14 },
+    { name: 'naveen', rollno: 14 },
+    { name: 'harsii', rollno: 14 },
+    { name: 'rashu', rollno: 14 },
+  ];
+  res.json({ err: 0, data: data, errmsg: 'okk' });
+});
+
 module.exports = router;
